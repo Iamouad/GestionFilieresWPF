@@ -86,7 +86,7 @@
                         <telerik:RadButton x:Name="resetUpdateFiliere" Content="Reset" MinWidth="100" Margin="15,0,0,0" Click="resetUpdateFiliere_Click"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel x:Name="addStudentForm" Height="253" Width="815" Background="White" Orientation="Horizontal" Canvas.Left="10" Canvas.Top="323" Visibility="Hidden">
+                <StackPanel x:Name="addStudentForm" Height="253" Width="616" Background="White" Orientation="Horizontal" Canvas.Left="103" Canvas.Top="360" Visibility="Hidden">
                     <Grid Canvas.Left="10" Canvas.Top="10" Width="487" Margin="0,8,0,0.333">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -99,7 +99,7 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <Label Margin="0,0,0,35" Grid.RowSpan="2" >CNE:</Label>
+                        <Label Margin="0,0,0.333,35" Grid.RowSpan="2" >CNE:</Label>
                         <TextBox Margin="13.667,0,44.667,9.667" Grid.ColumnSpan="2" x:Name="studentCne" Grid.Column="1" />
                         <Label Grid.Row="1" Margin="0,0,0,33" Grid.RowSpan="2">Nom:</Label>
                         <TextBox Grid.Row="1" Margin="13.667,0.333,44.667,10.333" Grid.ColumnSpan="2" x:Name="studentName" Grid.Column="1"/>
@@ -114,6 +114,7 @@
                         <Label Margin="-1,78.667,0.333,54" Grid.Row="2" >Date de naissance:</Label>
                         <DatePicker x:Name="date_naissStudent" Grid.Column="1" Margin="13.667,78,44.667,43" Grid.Row="2" Grid.ColumnSpan="2"></DatePicker>
                         <Button Content="save" Click="saveStudent" Grid.ColumnSpan="3" Margin="109,133,239.667,5.333" Grid.Row="2"/>
+                        <Button Content="Reset" Grid.Column="2" HorizontalAlignment="Left" Margin="100.667,133,0,0" Grid.Row="2" VerticalAlignment="Top" Width="145" Height="33" Click="Button_Click"/>
                     </Grid>
 
 

@@ -256,6 +256,11 @@ namespace ProjetGestionFilieres
 
         private void ResetProfil_Click(object sender, RoutedEventArgs e)
         {
+            updateStudentForm.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
             addStudentForm.Visibility = Visibility.Hidden;
         }
     }
