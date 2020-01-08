@@ -37,6 +37,7 @@ namespace ProjetGestionFilieres
         {
             cl = ManagerDB.cl;
             collectionStudents = new ObservableCollection<etudiant>(cl.etudiants.ToList());
+
             collectionFilieres = new ObservableCollection<Filiere>(cl.Filieres.ToList());
             studentsListView.ItemsSource = collectionStudents;
             foreach (Filiere f in collectionFilieres)
@@ -156,6 +157,7 @@ namespace ProjetGestionFilieres
                 MessageBox.Show(this, "Veuillez selectionnez une filière");
             }
             formUpdateFiliere.Visibility = Visibility.Hidden;
+            
             carouselFiliere.ItemsSource = collectionFilieres;
         }
 
@@ -176,6 +178,7 @@ namespace ProjetGestionFilieres
                 cl.SubmitChanges();
                 MessageBox.Show("Etudiant supprimé");
                 collectionStudents.Remove(etd);
+                studentsListView.ItemsSource = collectionStudents;
             }
             else
             {
@@ -192,6 +195,10 @@ namespace ProjetGestionFilieres
             {
                 
                 updateStudentForm.Visibility = Visibility.Visible;
+                newstudentCne.Text = etd.cne.ToString();
+                newstudentName.Text = etd.nom;
+                newstudentLastName.Text = etd.prenom;
+                newdate_naissStudent.DisplayDate = etd.date_naiss.Value; 
             }
             else
             {
@@ -235,6 +242,7 @@ namespace ProjetGestionFilieres
             cl.etudiants.InsertOnSubmit(etudiant);
             cl.SubmitChanges();
             collectionStudents.Add(etudiant);
+            studentsListView.ItemsSource = collectionStudents;
             addStudentForm.Visibility = Visibility.Hidden;
 
         }
